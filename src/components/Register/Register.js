@@ -20,7 +20,7 @@ class Register extends React.Component {
 	}
     onSubmitSignIn = (event) => {
     	event.preventDefault()
-    	fetch('http://localhost:3001/register',{
+    	fetch('https://smartestbrain.netlify.app/register',{
     		method: 'post',
     		headers: {'Content-Type': 'application/json'},
     		body: JSON.stringify({
