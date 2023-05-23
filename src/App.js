@@ -78,7 +78,12 @@ class App extends React.Component {
     this.setState({imageUrl: this.state.input});
     app.models
     .predict(
-      Clarifai.FACE_DETECT_MODEL,
+      {
+        id: 'face-detection',
+        name: 'face-detection',
+        version: '6dc7e46bc9124c5c8824be4822abe105',
+        type:'visual-detector,
+      },
       this.state.input)
     .then(response => {
       if(response){
