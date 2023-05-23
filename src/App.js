@@ -76,15 +76,7 @@ class App extends React.Component {
       // predicting an a sample image from clarifai
   onButtonSubmit = ()=> {
     this.setState({imageUrl: this.state.input});
-    app.models
-    .predict(
-      {
-        id: 'face-detection',
-        name: 'face-detection',
-        version: '6dc7e46bc9124c5c8824be4822abe105',
-        type:'visual-detector,
-      },
-      this.state.input)
+    app.models.predict('face-detection', this.state.input)
     .then(response => {
       if(response){
           fetch('https://smart-brain-backend-88e3.onrender.com/image',{
