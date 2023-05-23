@@ -82,7 +82,7 @@ class App extends React.Component {
       this.state.input)
     .then(response => {
       if(response){
-          fetch('https://smartestbrain.netlify.app/image',{
+          fetch('https://smart-brain-backend-88e3.onrender.com/image',{
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
