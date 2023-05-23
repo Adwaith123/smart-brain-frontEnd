@@ -11,7 +11,7 @@ import Rank from './components/Rank/Rank';
 import './App.css';
 // This is our api key to esatablish connection to the clarifai
 const app = new Clarifai.App({
-  apiKey: 'API CLARIFAI'
+  apiKey: 'API_CLARIFAI'
 });
 
 const particlesOptions = {
